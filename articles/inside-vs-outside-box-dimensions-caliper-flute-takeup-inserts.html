@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inside vs. Outside Box Dimensions: How Caliper, Flute Take-Up, and Inserts Affect Custom Packaging | CubitPack Packaging Engineering Reference</title>
+  <link rel="canonical" href="https://cubitpk.github.io/articles/inside-vs-outside-box-dimensions-caliper-flute-takeup-inserts.html" />
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #0f172a; }
+    a { color: #1d4ed8; }
+    code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+    .nav { margin-bottom: 24px; font-size: 14px; color: #475569; }
+    .cta { margin-top: 32px; padding: 20px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="nav"><a href="https://cubitpk.github.io/">← CubitPack Open Packaging Reference</a> · <a href="https://cubitpack.com">CubitPack.com</a> · <a href="https://cubitpack.com/tools/box-size-calculator">Primary Spec Hub</a></div>
+  <h1>Inside vs. Outside Box Dimensions: How Caliper, Flute Take-Up, and Inserts Affect Custom Packaging</h1>
+  <p>One of the most expensive mistakes a product brand can make happens before a single drop of ink hits the press: ordering a custom box using <strong>outside dimensions</strong> when the product was measured for <strong>inside dimensions</strong>—or forgetting to account for the wall thickness of corrugated board and protective inserts.</p>
+<p>A discrepancy of just an eighth of an inch is enough to make a rigid cosmetic jar jam halfway into a folding carton, or cause a glass bottle to rattle loose during parcel transit.</p>
+<p>Here is the practical engineering breakdown of how packaging dimensions actually work across folding cartons, corrugated mailers, rigid setup boxes, and custom inserts.</p>
+<h2>1. Always Specify Packaging in $L \times W \times D$ Order (Interior Usable Space)</h2>
+<p>In US custom packaging manufacturing, box dimensions are always read from the <strong>opening face</strong> of the box in this exact sequence:</p>
+<ul>
+<li><strong>Length ($L$):</strong> The left-to-right width across the front display panel.</li>
+<li><strong>Width ($W$):</strong> The front-to-back depth across the side panel.</li>
+<li><strong>Depth ($D$ or Height $H$):</strong> The top-to-bottom vertical measurement from the top opening to the bottom closure.</li>
+</ul>
+<p>When you enter dimensions into a quote form or the <a href="https://cubitpack.com/tools/box-size-calculator">CubitPack Box Size Calculator</a>, always start from the <strong>interior usable cavity</strong> your product and insert require.</p>
+<h2>2. Why Corrugated Mailer Boxes Lose Interior Space on the Side Walls</h2>
+<p>Consider a standard <a href="https://cubitpack.com/custom-mailer-boxes">custom mailer box</a> (FEFCO 0427 / roll-end tuck-top style). Unlike a regular slotted shipping carton (<a href="https://cubitpack.com/custom-shipping-boxes">custom shipping boxes</a>) that has a single layer of corrugated board on all four walls, a roll-end mailer box folds its two side walls up and then <strong>rolls them over a second time</strong> to lock into the bottom slots.</p>
+<p>That double-wall rollover is what gives a mailer box its crush resistance in the mail—but it also means the left and right walls are <strong>two layers of corrugated flute thick</strong>, plus the front tuck wings that slide inside them. If a dieline is not engineered specifically around your interior cavity, your product will be pinched across the Length axis.</p>
+<h2>3. Accounting for Custom Inserts (Cardboard, EVA Foam, EPE Foam & Molded Pulp)</h2>
+<p>Whenever a product needs internal immobilization, the box dieline must be sized around the <strong>insert's outer footprint</strong>, not the bare product:</p>
+<ul>
+<li><strong><a href="https://cubitpack.com/custom-cardboard-inserts">Custom Cardboard Inserts</a> & <a href="https://cubitpack.com/custom-corrugated-inserts">Custom Corrugated Inserts</a>:</strong> Folded paperboard collars and partitions need perimeter wall clearance so the insert slides into the outer carton without bowing the side panels.</li>
+<li><strong><a href="https://cubitpack.com/custom-eva-foam-inserts">Custom EVA Foam Inserts</a> & <a href="https://cubitpack.com/custom-epe-foam-inserts">Custom EPE Foam Inserts</a>:</strong> Die-cut foam trays require a minimum border wall around the cavity perimeter so the foam does not tear or collapse when the product is pressed in.</li>
+</ul>
+<h2>4. Balancing Product Protection Against Carrier Dimensional (DIM) Weight</h2>
+<p>Making a box slightly larger is not free once the parcel reaches USPS, UPS, or FedEx. Major carriers bill whichever is greater: <strong>actual scale weight</strong> or <strong>dimensional (DIM) weight</strong>, calculated as:</p>
+<p>$$\text{DIM Weight (lb)} = \frac{\text{Exterior Length} \times \text{Exterior Width} \times \text{Exterior Height}}{\text{DIM Divisor}}$$</p>
+<p>Adding an unnecessary inch of empty headspace to an e-commerce shipping box can push every single order into the next billable pound tier. Before locking your box dimensions, run your target measurements through the <a href="https://cubitpack.com/tools/dimensional-weight-calculator">Free Dimensional Weight Calculator</a> to see the exact carrier weight threshold.</p>
+<h2>5. How to Get an Exact Custom Dieline & 3D Proof Before You Pay</h2>
+<p>At <a href="https://cubitpack.com">CubitPack</a>, every order includes a free custom structural dieline sized to your exact product, free artwork check and prepress setup, a digital proof and 3D mockup before payment, and free shipping to all 50 US states. If you want to test materials and finishes in person first, you can also order the <a href="https://cubitpack.com/sample-kit">$50 Sample Kit</a>, which is credited toward your first production order.</p>
+  <div class="cta">
+    <strong>CubitPack Prepress &amp; Structural Studio (Brooklyn, NY):</strong> Explore <a href="https://cubitpack.com">CubitPack Custom Packaging</a>, <a href="https://cubitpack.com/boxes">56 Custom Box Styles</a>, <a href="https://cubitpack.com/print-your-ai-design">Print Your AI Packaging Design</a>, and <a href="https://cubitpack.com/tools">Free Box Size, DIM Weight &amp; SVG Dieline Calculators</a>.
+  </div>
+</body>
+</html>

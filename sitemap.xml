@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cubitpk.github.io/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/custom-box-styles/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/custom-label-unwind-chart/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/sustainable-packaging-spec-guide/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/ai-packaging-prepress-spec/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/dim-weight-calculator/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://cubitpk.github.io/packaging-dieline-specs/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://cubitpk.github.io/</loc></url>
+  <url><loc>https://cubitpk.github.io/dieline-library.html</loc></url>
+  <url><loc>https://cubitpk.github.io/custom-box-styles/</loc></url>
+  <url><loc>https://cubitpk.github.io/custom-label-unwind-chart/</loc></url>
+  <url><loc>https://cubitpk.github.io/sustainable-packaging-spec-guide/</loc></url>
+  <url><loc>https://cubitpk.github.io/ai-packaging-prepress-spec/</loc></url>
+  <url><loc>https://cubitpk.github.io/dim-weight-calculator/</loc></url>
+  <url><loc>https://cubitpk.github.io/packaging-dieline-specs/</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/how-we-rebuild-ai-packaging-mockups-into-press-ready-cad-dielines.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/structural-box-shapes-engineering-reference-26-styles-compared.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/roll-label-unwind-charts-bopp-stocks-and-carrier-dim-weight-guide.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/how-to-turn-midjourney-chatgpt-gemini-renders-into-cmyk-dielines.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/how-parametric-packaging-dielines-work-cut-lines-crease-offsets-caliper.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/inside-vs-outside-box-dimensions-caliper-flute-takeup-inserts.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/pegboard-retail-packaging-compared-hang-tab-header-card-five-panel.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/comparing-custom-mailer-and-rigid-box-suppliers-us-small-business.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/parametric-fefco-and-ecma-box-dielines-in-pure-svg.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/turn-midjourney-or-chatgpt-packaging-mockups-into-real-printed-boxes.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/how-extra-mailer-box-height-triggers-carrier-dim-weight-surcharges.html</loc></url>
+  <url><loc>https://cubitpk.github.io/articles/scaling-from-blank-pouches-and-roll-labels-to-custom-printed-stand-up-pouches.html</loc></url>
 </urlset>

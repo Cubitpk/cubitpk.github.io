@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Parametric Packaging Dielines Work: Cut Lines, Crease Offsets, and Paperboard Caliper Math | CubitPack Packaging Engineering Reference</title>
+  <link rel="canonical" href="https://cubitpk.github.io/articles/how-parametric-packaging-dielines-work-cut-lines-crease-offsets-caliper.html" />
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #0f172a; }
+    a { color: #1d4ed8; }
+    code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+    .nav { margin-bottom: 24px; font-size: 14px; color: #475569; }
+    .cta { margin-top: 32px; padding: 20px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="nav"><a href="https://cubitpk.github.io/">← CubitPack Open Packaging Reference</a> · <a href="https://cubitpack.com">CubitPack.com</a> · <a href="https://cubitpack.com/tools/dieline-templates">Primary Spec Hub</a></div>
+  <h1>How Parametric Packaging Dielines Work: Cut Lines, Crease Offsets, and Paperboard Caliper Math</h1>
+  <p>When software engineers look at a folding carton or corrugated mailer box, it looks like simple geometry: a rectangular prism defined by Length ($L$), Width ($W$), and Depth ($H$).</p>
+<p>When you unfold that prism into a flat 2D SVG or CAD dieline for a steel-rule die cutter, however, zero-thickness Euclidean geometry breaks down immediately. Paperboard and corrugated flute have physical thickness (<strong>caliper</strong>), and every $90^\circ$ or $180^\circ$ fold consumes board allowance.</p>
+<p>Here is how parametric packaging dielines work under the hood—and why interior product dimensions never equal exterior flat panel coordinates.</p>
+<h2>1. The Four Standard CAD Line Types in a Packaging Dieline</h2>
+<p>In structural packaging prepress (ECMA for folding cartons and FEFCO for corrugated boxes), a flat SVG or PDF dieline encodes mechanical tooling paths using distinct stroke conventions:</p>
+<ul>
+<li><strong>Trim / Cut Line (Solid Stroke):</strong> Where hardened steel knife rule cuts completely through the substrate.</li>
+<li><strong>Crease / Score Line (Dashed Stroke):</strong> Where rounded creasing rule compresses the paperboard fibers against a matrix channel so the panel hinges cleanly along a single axis without cracking the outer clay coating or lamination.</li>
+<li><strong>Perforation Line (Cut-Tie Pattern):</strong> Alternating cut and uncut bridges (for example, tear-strip mailers or retail display trays).</li>
+<li><strong>Bleed & Safety Offsets:</strong> Ink bleed extends outward past the cut line so mechanical die-cutting registration tolerances never leave a white paper edge, while live copy stays inset from crease lines.</li>
+</ul>
+<p>!<a href="https://cubitpack.com/media/styles/custom-five-panel-hanger-boxes/custom-five-panel-hanger-boxes-dieline.svg">Five Panel Hanger Box Structural Dieline</a></p>
+<h2>2. Inside Dimensions (ID) vs. Outside Dimensions (OD)</h2>
+<p>When a brand orders <a href="https://cubitpack.com/boxes">custom boxes</a>, they measure the object going *inside* the box: a glass dropper bottle, a candle jar, or a circuit board inside a <a href="https://cubitpack.com/custom-eva-foam-inserts">custom EVA foam insert</a>.</p>
+<p>If a folding carton or corrugated box has substrate thickness $t$:</p>
+<ul>
+<li>Each single-wall $90^\circ$ crease shifts the neutral bend axis by approximately $0.5t$ to $1.0t$ depending on board density and grain direction.</li>
+<li>Panels that fold $180^\circ$ back on themselves—such as the rollover side walls of a <a href="https://cubitpack.com/custom-mailer-boxes">custom mailer box</a> or the laminated fifth panel of a <a href="https://cubitpack.com/custom-five-panel-hanger-boxes">custom five panel hanger box</a>—must accommodate two full thicknesses of board plus adhesive clearance.</li>
+<li>Dust flaps and tuck flaps require subtle lateral step-backs (typically $0.5\text{ mm}$ to $1.5\text{ mm}$ depending on caliper) so the friction lock or slit-lock closes smoothly without buckling the side walls.</li>
+</ul>
+<p>You can test how product dimensions map to box sizing directly in the <a href="https://cubitpack.com/tools/box-size-calculator">CubitPack Box Size Calculator</a>.</p>
+<h2>3. Why Structural Style Dictates Panel Topology</h2>
+<p>Two boxes with identical interior $L \times W \times H$ dimensions can have completely different flat sheet footprints and material yield depending on their closure mechanics:</p>
+<ol>
+<li><strong>Straight Tuck End (STE) vs. Reverse Tuck End (RTE):</strong></li>
+</ol>
+<ul>
+<li>On <a href="https://cubitpack.com/custom-straight-tuck-end-boxes">Custom Straight Tuck End Boxes</a>, both the top and bottom tuck flaps hinge off the same rear panel, keeping both raw cut edges tucked away from the front display panel.</li>
+<li>On <a href="https://cubitpack.com/custom-reverse-tuck-end-boxes">Custom Reverse Tuck End Boxes</a>, the top and bottom tuck flaps hinge on opposite panels so adjacent blanks can nest head-to-toe on the press sheet, reducing paperboard waste.</li>
+</ul>
+<ol>
+<li><strong>Auto-Lock Bottom vs. 1-2-3 Snap Lock Bottom:</strong></li>
+</ol>
+<ul>
+<li><a href="https://cubitpack.com/custom-auto-lock-bottom-boxes">Custom Auto Lock Bottom Boxes</a> include pre-glued diagonal crease tabs on the bottom flaps so fulfillment teams can pop the carton open in a single motion.</li>
+<li><a href="https://cubitpack.com/custom-1-2-3-bottom-boxes">Custom 1-2-3 Bottom Boxes</a> interlock four bottom flaps manually without bottom glue points, trading a few seconds of assembly time for flat-pack simplicity.</li>
+</ul>
+<h2>4. Free Tools & Reference Templates for Developers and Designers</h2>
+<p>Whether you are building e-commerce fulfillment software, calculating shipping tiers with a <a href="https://cubitpack.com/tools/dimensional-weight-calculator">Dimensional Weight Calculator</a>, or preparing packaging artwork:</p>
+<ul>
+<li><strong>Explore 56 Structural Box Styles:</strong> <a href="https://cubitpack.com/box-styles">CubitPack Box Styles Hub</a></li>
+<li><strong>Download Dieline Templates & Calculators:</strong> <a href="https://cubitpack.com/tools">CubitPack Free Packaging Tools</a></li>
+<li><strong>Turn AI Concepts into Production Dielines:</strong> <a href="https://cubitpack.com/print-your-ai-design">Print Your AI Packaging Design</a></li>
+</ul>
+  <div class="cta">
+    <strong>CubitPack Prepress &amp; Structural Studio (Brooklyn, NY):</strong> Explore <a href="https://cubitpack.com">CubitPack Custom Packaging</a>, <a href="https://cubitpack.com/boxes">56 Custom Box Styles</a>, <a href="https://cubitpack.com/print-your-ai-design">Print Your AI Packaging Design</a>, and <a href="https://cubitpack.com/tools">Free Box Size, DIM Weight &amp; SVG Dieline Calculators</a>.
+  </div>
+</body>
+</html>
